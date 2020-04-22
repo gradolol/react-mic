@@ -19,7 +19,7 @@ navigator.getUserMedia = (navigator.getUserMedia
                           || navigator.msGetUserMedia)
 
 export class MicrophoneRecorder {
-  constructor(onStart, onStop, onSave, onData, options, soundOptions) {
+  constructor(onStart, onStop, onSave, onData, options, soundOptions, deviceId) {
     const {
       echoCancellation,
       autoGainControl,
@@ -38,7 +38,8 @@ export class MicrophoneRecorder {
         echoCancellation,
         autoGainControl,
         noiseSuppression,
-        channelCount
+        channelCount,
+        exact: deviceId,
       },
       video: false
     }

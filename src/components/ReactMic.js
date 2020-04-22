@@ -34,6 +34,7 @@ export default class ReactMic extends Component {
       echoCancellation,
       autoGainControl,
       noiseSuppression,
+      deviceId,
       channelCount,
       mimeType
     } = this.props
@@ -67,7 +68,8 @@ export default class ReactMic extends Component {
           onSave,
           onData,
           options,
-          soundOptions
+          soundOptions,
+          deviceId
         ),
         canvas,
         canvasCtx
